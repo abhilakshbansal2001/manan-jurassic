@@ -1,0 +1,170 @@
+$red: #f25774;
+$orange: #ffb65b;
+$yellow: #fdda74;
+$green: #4cbe5d;
+$blue: #4080ff;
+$purple: #7b64c0;
+$background: #fceafc;
+
+.loader{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: $background;
+    z-index: 1000;
+
+}
+
+
+.hidden {
+    background: $background;
+    width: 490px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    height: 490px;
+    margin-left: -245px;
+    margin-top: 105px;
+  }
+  
+  .arc {
+    animation-name: spin;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    border-radius: 50%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: rotateZ(-180deg);
+  
+    &.color {
+      clip-path: inset(0 0 50% 0);
+  
+      &.red {
+        background: $red;
+      }
+  
+      &.orange {
+        background: $orange;
+      }
+  
+      &.yellow {
+        background: $yellow;
+      }
+  
+      &.green {
+        background: $green;
+      }
+  
+      &.blue {
+        background: $blue;
+      }
+  
+      &.purple {
+        background: $purple;
+      }
+    }
+    
+    &.red {
+      height: 490px;
+      margin-left: -245px;
+      margin-top: -140px;
+      width: 490px;
+      animation-delay: 0.0s;
+    }
+  
+    &.orange {
+      height: 420px;
+      margin-left: -210px;
+      margin-top: -105px;
+      width: 420px;
+      animation-delay: 0.2s;
+    }
+  
+    &.yellow {
+      height: 350px;
+      margin-left: -175px;
+      margin-top: -70px;
+      width: 350px;
+      animation-delay: 0.4s;
+    }
+  
+    &.green {
+      height: 280px;
+      margin-left: -140px;
+      margin-top: -35px;
+      width: 280px;
+      animation-delay: 0.6s;
+    }
+  
+    &.blue {
+      height: 210px;
+      margin-left: -105px;
+      margin-top: 0px;
+      width: 210px;
+      animation-delay: 0.8s;
+    }
+  
+    &.purple {
+      height: 140px;
+      margin-left: -70px;
+      margin-top: 35px;
+      width: 140px;
+      animation-delay: 1.0s;
+    }
+    
+    &.bottom {
+      background: $background;
+      height: 70px;
+      margin-left: -35px;
+      margin-top: 70px;
+      width: 70px;
+      animation-delay: 0s;
+    }
+  
+    &.background {
+      clip-path: inset(50% 0 0 0);
+      background: $background;
+    }
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotateZ(-180deg);
+    }
+    15% {
+      transform: rotateZ(-180deg);
+    }
+    31% {
+      transform: rotateZ(0deg);
+    }
+    69% {
+      transform: rotateZ(0deg);
+    }
+    85% {
+      transform: rotateZ(180deg);
+    }
+    100% {
+      transform: rotateZ(180deg);
+    }
+  }
+  
+ul.transition{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 10;
+  top: 0;left: 0;
+  margin: 0;
+  pointer-events: none;
+  li{
+    transform: scaleY(0);
+    background:#fff;
+    width: 20%;
+  }
+}

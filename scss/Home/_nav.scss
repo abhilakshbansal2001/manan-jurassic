@@ -1,0 +1,63 @@
+
+.toggle-btn {
+    position: fixed;
+    margin: 1.4em;
+    padding: 1em;
+    width: 40px;
+    height: 12px;
+    right: 1em;
+    z-index: 52;
+    cursor: pointer;
+    span.one {
+        position: absolute;
+        width: 40px;
+        height: 2px;
+        background: $secondary-color;
+    }
+    
+    span.two {
+        position: absolute;
+        width: 40px;
+        height: 2px;
+        background: $secondary-color;
+        margin-top: 12px;
+    }
+}
+
+
+.menu {
+    z-index: 0;
+    position: absolute;
+    background: $bg;
+    height: 100vh;
+    width: 100%;
+    transform: translateY(-100vh);
+    
+    z-index: 51;
+    .data {
+        padding: 8em 0 0 2em;
+        text-align: left;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    li:first-child {
+        color: grey;
+        font-family: Poppins;
+        font-size: 24px;
+    }
+    
+    li:not(:first-child) {
+        color: #fff;
+        font-size: 42px;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #fff;
+        font-family: Poppins;
+    }
+}
+

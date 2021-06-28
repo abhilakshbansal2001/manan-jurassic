@@ -1,0 +1,21 @@
+:root {
+  --default-font: "Source Sans Pro", "sans-serif";
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $default-font;
+  overscroll-behavior-y: none;
+  // cursor:none;
+}
