@@ -20,6 +20,7 @@ const nav = () => {
         delay: -2
     });
 
+    let linkTimeout;
 
     t1.staggerFrom(".menu ul li", 2, {x: -200, opacity: 0, ease:Expo.easeOut}, 0.2);
 
@@ -34,8 +35,12 @@ const nav = () => {
     const links = document.querySelectorAll(".menu .data ul li a");
     links.forEach((a)=>{
         a.addEventListener("click", function(){
+            // let path = window.location.pathname.split("/");
+            // path = path[path.length-1].split(".")[0];
+            // if(path != a.innerText){
             t1.reversed(!t1.reversed());
-            setTimeout(function(){
+            clearTimeout(linkTimeout)
+            linkTimeout =  setTimeout(function(){
                 if(a.innerText === "Home")
 
                 window.location.replace(`/manan-jurassic/`);
@@ -43,6 +48,7 @@ const nav = () => {
                 window.location.replace(`/manan-jurassic/${a.innerText.toLowerCase()}`);
 
             } , 3800);
+        //   }
         })
     })
 
