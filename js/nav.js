@@ -38,9 +38,9 @@ const nav = () => {
             setTimeout(function(){
                 if(a.innerText === "Home")
 
-                window.location.replace(`/GitHubEventWeb/index.html`);
+                window.location.replace(`/manan-jurassic/`);
                 else
-                window.location.replace(`/GitHubEventWeb/${a.innerText.toLowerCase()}.html`);
+                window.location.replace(`/manan-jurassic/${a.innerText.toLowerCase()}`);
 
             } , 3800);
         })

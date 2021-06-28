@@ -14,7 +14,7 @@ let modal = () => {
 
     let imgs = document.querySelectorAll(".slides img");
     imgs.forEach(img => {
-        images.push({link : img.src , title : img.innerText ?img.innerText : "Title" });
+        images.push({link : img.src , title : img.getAttribute("alt") ?img.getAttribute("alt") : "Title" });
     })
 
     // console.log(images);
