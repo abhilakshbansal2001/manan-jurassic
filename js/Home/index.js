@@ -1,11 +1,11 @@
 import fullPage from './main.js';
-import pointer from '../cursor.js';
+
 import feature from './feature.js';
 import nav from '../nav.js';
 import testimonial from './testimonial.js';
 
 fullPage();
-pointer();
+
 nav();
 feature();
 testimonial();
